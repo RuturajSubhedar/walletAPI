@@ -15,14 +15,23 @@ public class WalletServiceImpl implements WalletService {
 
 	@Override
 	public WalletDto doTransaction(PaymentTransactionDto transaction) {
-		logger.info("Transaction request received = {} ", transaction);
+		logger.info(
+			"Wallet transaction received. emailId={}, type={}, method={}, amount={}, orderId={}",
+			transaction.getEmailId(),
+			transaction.getType(),
+			transaction.getMethod(),
+			transaction.getAmount(),
+			transaction.getOrderId()
+		);
+
 		// Implemented
 		return null;
 	}
 
 	@Override
 	public WalletDto getBalance(String emailId) {
-		logger.info("Get Wallet balance request received = {} ", emailId);
+		logger.info("Wallet balance request received. emailId={}", emailId);
+
 		// Implemented
 		return null;
 	}
